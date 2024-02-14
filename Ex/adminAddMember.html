@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Members</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <style>
+  
+  h2 {
+  	padding : 10px;
+  	color : darkslategray;
+  	font-weight : bold;
+  }
+  
+  header {
+  	padding-left : 300px;
+  	margin : 10px;
+  	
+  }
+  
+  
+  article {
+  	padding-left : 300px;
+
+  }
+  
+  aside ul {
+		list-style-type: none;
+		width : 13%;
+		background-color: snow;
+		padding: 0;
+		margin : 0;
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+		text-align : center;
+	}
+	
+
+aside li a {
+		text-decoration: none;
+		display: block;
+		color: dimgray;
+		padding: 23px;
+		font-weight: bold;
+	}
+
+aside li a.job {
+		background-color: darkslategray;
+		color: snow;
+	}
+
+aside li a:hover:not(.job) {
+		background-color: darkslategray;
+		color: snow;
+	}
+  
+ 
+ div {
+ 	float : left;
+ 	margin-right : 10px;
+ }
+ 
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 1500px;
+}
+table tr ,
+table tr td {
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding: 5px;
+}
+table tr th:first-child,
+table tr td:first-child {
+  border-left: 1px solid #bbb;
+}
+table tr th {
+  background: #eee;
+  border-top: 1px solid #bbb;
+  text-align: left;
+}
+
+/* top-left border-radius */
+table tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+
+/* top-right border-radius */
+table tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+table tr td {
+	border : none;
+}
+
+table th {
+	height : 90px;
+}
+
+footer {
+	height : 100px;
+	background-color : ghostwhite;
+	}
+
+  </style>
+  </head>
+  <body>
+  
+  <header>
+  
+  	<h2>Admin</h2>
+  	<hr>
+  	
+  </header>
+   
+
+	
+
+	
+<aside>
+
+	 <nav class="navbar bg-body-tertiary" style="float:left;">
+  <form class="container-fluid">
+  <div class="row">
+ 	<div class="col-2">
+ 	
+ 	<ul>
+	<li><a href="#">HOME</a>
+	<li><a href="#">공지사항</a></li>
+	<li><a class="job" href="#">회원관리</a>
+	<li><a href="#">스폰서관리</a></li>
+	<li><a href="#">광고관리</a></li>
+	<li><a href="#">서비스관리</a></li>
+	<li><a href="#">커뮤니케이션</a></li>
+	<li><a href="#">시스템관리</a></li>
+	<li><a href="#">개인정보관리</a></li>
+	<li><a href="#">test</a></li>
+	<li><a href="#">gps</a></li>
+</ul>
+
+ 	</div> 
+  
+  </div>
+  </form>
+</nav>
+
+</aside>
+
+
+<article>
+
+<ul class="nav nav-pills">
+
+  <li class="nav-item">
+    <a class="nav-link" href="#">Page1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Page2</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Default</a>
+  </li>
+
+</ul>
+
+<h2 style="font-weight : bold">회원 관리</h2>
+
+<h4 style="font-weight : bold">기본 정보</h4>
+
+<hr>
+
+<table>
+
+<tr>
+	<th>기본 정보</th>
+	<th></th>
+	<th></th>
+	<th></th>
+</tr>
+
+<tr>
+	<td>
+	<div class="input-container">
+
+<p> 코드 *</p>
+	<input type="text" class="form-control" placeholder="자동생성" disabled/>
+	</div>
+	</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	
+<tr>
+	<td>
+	<p>소셜 아이디 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="영대소문자, 숫자">
+	</div>
+	</td>
+	
+	<td>
+	<p>소셜 *</p>
+<div class="input-group">
+
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">선택하세요</option>
+    <option value="2">인스타그램</option>
+    <option value="3">페이스북</option>
+    <option value="4">트위터</option>
+
+ </select>
+</div>
+	</td>
+	
+	<td>
+	<p>이름 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="영대소문자, 한글">
+	</div>
+	</td>
+	
+	<td>
+	<p>성별 *</p>
+<div class="input-group">
+
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">선택하세요</option>
+    <option value="2">남</option>
+    <option value="3">여</option>
+    <option value="4">기타</option>
+
+ </select>
+</div>
+	</td>
+	
+<tr>
+
+	<td>
+	<p>생년월일 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="number" class="form-control" placeholder="주민등록번호 앞 6자리">
+	</div>
+	</td>
+	
+	<td>
+	<p>이메일 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="id@social.com">
+	</div>
+	</td>
+	
+	<td>
+	<p>전화번호 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="number" class="form-control" placeholder="하이픈 없이 숫자만">
+	</div>
+	</td>
+	
+	<td></td>
+</tr>
+
+<tr>
+
+	<td>
+	<p> 자택 지역 1 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">선택하세요</option>
+    <option value="2">경기도</option>
+    <option value="3">어쩌구도</option>
+    <option value="4">저쩌구도</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 자택 지역 2 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">선택하세요</option>
+    <option value="2">수원시</option>
+    <option value="3">어쩌구시</option>
+    <option value="4">저쩌구시</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 사무실 지역 1 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">선택하세요</option>
+    <option value="2">경기도</option>
+    <option value="3">어쩌구도</option>
+    <option value="4">저쩌구도</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 사무실 지역 2 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">선택하세요</option>
+    <option value="2">수원시</option>
+    <option value="3">어쩌구시</option>
+    <option value="4">저쩌구시</option>
+
+	</select>
+	</div>
+	</td>
+	
+</tr>
+
+<tr>
+
+
+	<td>
+	<p> 우편번호 * </p>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="숫자만" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">X</button>
+</div>
+
+</td>
+
+	
+	<td>
+	<p>주소 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>상세주소 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>참고항목 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+
+</tr>
+
+<tr>
+
+	<td>
+	<p> 이용 약관 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">동의 여부</option>
+    <option value="2">Y</option>
+    <option value="3">N</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 이용 약관 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">동의 여부</option>
+    <option value="2">Y</option>
+    <option value="3">N</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 개인정보 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">동의 여부</option>
+    <option value="2">Y</option>
+    <option value="3">N</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 앱 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">동의 여부</option>
+    <option value="2">Y</option>
+    <option value="3">N</option>
+
+	</select>
+	</div>
+	</td>
+
+</tr>
+
+<tr>
+
+	<td>
+	<p> 앱 상태 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">Y</option>
+    <option value="2">N</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 앱 공지*</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">Y</option>
+    <option value="2">N</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td>
+	<p> 앱 탈퇴 *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">Y</option>
+    <option value="2">N</option>
+
+	</select>
+	</div>
+	</td>
+	
+	<td></td>
+	
+</tr>
+
+<tr>
+
+
+	<td>
+	<p> 우편번호 * </p>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="숫자만" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">X</button>
+</div>
+
+	</td>
+	
+	<td>
+	<p>주소 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>상세주소 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>참고항목 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+
+</tr>
+
+<tr>
+
+	<td>
+	<p> 모바일 OS *</p>
+	<div class="input-group">
+
+	<select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option value="1">선택하세요</option>
+    <option value="2">iOS</option>
+    <option value="3">안드로이드</option>
+
+	</select>
+	</div>
+	</td>
+
+	<td>
+	<p>모바일 토큰 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>FCM토큰 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td></td>
+
+</tr>
+
+<tr>
+
+	<td>
+	<p>예금주 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>은행* </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>계좌번호 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+
+	
+	<td></td>
+	
+</tr>
+
+<tr>
+
+	<td>
+	<p>차량명 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>차량번호* </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>차량타입 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>차량연식 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+
+</tr>
+
+<tr>
+
+	<td>
+	<p>차량색깔 * </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+	
+	<td>
+	<p>차량등록지* </p>
+	<div class="input-group flex-nowrap">
+	<input type="text" class="form-control" placeholder="숫자만">
+	</div>
+	</td>
+
+	<td></td>
+	<td></td>
+	
+</tr>
+<tr>
+
+<td>
+	<div class=left-button>
+    <button type="button"  class="btn btn-outline-dark btn-sm">
+	 <img src="./img/list.png" alt="plusdata" height="25;">
+     </button>
+     </div>
+ </td>
+ 
+<td></td>
+<td></td>
+ 
+ <td>
+ 
+ 	<div class=left-button style="float : right">
+    <button type="button"  class="btn btn-outline-dark btn-sm">
+	 <img src="./img/database.png" alt="plusdata" height="25;">
+     </button>
+     </div>
+     
+ </td>
+ 
+ </tr>
+	
+
+</table>
+</article>
+
+<footer>
+
+<p style="float : right; padding-top : 50px"> v1.1.1</p>
+
+</footer>
+	
+  </body>
+</html>
